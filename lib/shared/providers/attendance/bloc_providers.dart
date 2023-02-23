@@ -1,3 +1,4 @@
+import 'package:blueex_emp_app_flutter/features/attendance/domain/usecase/request_attendance_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:blueex_emp_app_flutter/features/attendance/domain/usecase/attendance_data_usecase.dart';
 import 'package:blueex_emp_app_flutter/features/attendance/domain/usecase/station_usecase.dart';
@@ -18,6 +19,7 @@ class AttendanceBlocProviders {
     BlocProvider<AttendanceDataCubit>(
       create: (context) => AttendanceDataCubit(
         attendanceDataUseCase: context.read<AttendanceDataUseCase>(),
+        requestAttendanceUseCase: context.read<RequestAttendanceUseCase>(),
       ),
     ),
     // Today Attendance

@@ -42,7 +42,8 @@ class MyDropdown extends StatelessWidget {
       value: selected,
       onChanged: onChange,
       style: TextStyle(
-        color: const Color(0xFF111113).withOpacity(0.6),
+        
+        color: Color(0xFF828282),
         fontSize: 16,
       ),
     );

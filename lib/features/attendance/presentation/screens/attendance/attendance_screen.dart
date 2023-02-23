@@ -1,4 +1,5 @@
 import 'package:blueex_emp_app_flutter/features/attendance/presentation/cubits/today_attendance/today_attendance_cubit.dart';
+import 'package:blueex_emp_app_flutter/features/attendance/presentation/screens/attendance/widgets/check_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:geolocator/geolocator.dart';
@@ -16,6 +17,11 @@ import 'package:blueex_emp_app_flutter/resources/constants.dart';
 import 'package:blueex_emp_app_flutter/shared/route_aware/route_aware.dart';
 import 'package:blueex_emp_app_flutter/shared/routes/navigate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
+
+import '../../../../../GetX/Controller/request_attendance_controller.dart';
+import '../../../../../resources/colors.dart';
+import '../../../../user/presentation/cubits/user/user_cubit.dart';
 
 part 'widgets/body.dart';
 
@@ -26,11 +32,11 @@ class AttendanceScreen extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    void _checkSameDay() {
+    void checkSameDay() {
       context.read<TodayAttendanceCubit>().checkSameDay();
     }
 
-    Future _determinePosition() async {
+    Future determinePosition() async {
       LocationPermission permission;
       permission = await Geolocator.checkPermission();
 
@@ -47,8 +53,8 @@ class AttendanceScreen extends HookWidget {
     }
 
     useEffect(() {
-      _determinePosition();
-      _checkSameDay();
+      determinePosition();
+      checkSameDay();
       return null;
     }, []);
 

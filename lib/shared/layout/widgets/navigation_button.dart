@@ -33,7 +33,7 @@ class NavigationButton extends StatelessWidget {
           SvgPicture.asset(
             icon,
             color: color,
-            height: 25,
+            height: 20,
           ),
           const SizedBox(height: 4),
           Text(

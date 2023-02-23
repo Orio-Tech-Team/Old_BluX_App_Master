@@ -1,4 +1,4 @@
-import 'package:blueex_emp_app_flutter/features/user/presentation/screens/Home/home_screen.dart';
+import 'package:blueex_emp_app_flutter/features/user/presentation/screens/home/home_screen.dart';
 import 'package:blueex_emp_app_flutter/resources/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

@@ -33,3 +33,13 @@ const kGradient = LinearGradient(
   ],
   tileMode: TileMode.mirror,
 );
+
+const kGradient2 = LinearGradient(
+  begin: Alignment.topLeft,
+  end: Alignment(0.8, 1),
+  colors: <Color>[
+    Color(0xFFEE2A54),
+    Color(0xFFFC5C7D),
+  ],
+  tileMode: TileMode.mirror,
+);

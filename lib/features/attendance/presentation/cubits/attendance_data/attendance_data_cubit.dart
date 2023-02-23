@@ -1,5 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
+import 'package:blueex_emp_app_flutter/features/attendance/domain/usecase/request_attendance_usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:blueex_emp_app_flutter/features/attendance/domain/entity/attendance_data_entity.dart';
@@ -11,8 +12,10 @@ part 'attendance_data_state.dart';
 
 class AttendanceDataCubit extends Cubit<AttendanceDataState> {
   final AttendanceDataUseCase attendanceDataUseCase;
+  final RequestAttendanceUseCase requestAttendanceUseCase;
   AttendanceDataCubit({
     required this.attendanceDataUseCase,
+    required this.requestAttendanceUseCase,
   }) : super(AttendanceDataState.initial());
 
   Future<void> get(String token, String date) async {
@@ -31,5 +34,20 @@ class AttendanceDataCubit extends Cubit<AttendanceDataState> {
             attendanceData: attendance, status: AttendanceDataStatus.loaded));
       },
     );
+  }
+  Future<String> requestAttendance(AttendanceDataParams params) async {
+    String res = '';
+
+    final Either<Failure, String> attendanceData =
+    await requestAttendanceUseCase.call(params);
+
+    attendanceData.fold(
+          (Failure failure) {},
+          (String response) {
+        res = response;
+      },
+    );
+
+    return res;
   }
 }

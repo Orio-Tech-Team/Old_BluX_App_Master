@@ -3,8 +3,10 @@ import 'package:blueex_emp_app_flutter/shared/widgets/text.dart';
 
 class Alert extends StatelessWidget {
   final String heading, body;
+  
 
-  const Alert({super.key, required this.heading, required this.body});
+  const Alert({
+    super.key, required this.heading, required this.body});
 
   @override
   Widget build(BuildContext context) {

@@ -2,8 +2,8 @@ import 'package:blueex_emp_app_flutter/features/user/presentation/cubits/user/us
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:blueex_emp_app_flutter/features/user/presentation/screens/Home/home_screen.dart';
-import 'package:blueex_emp_app_flutter/features/user/presentation/screens/Login/login_screen.dart';
+import 'package:blueex_emp_app_flutter/features/user/presentation/screens/home/home_screen.dart';
+import 'package:blueex_emp_app_flutter/features/user/presentation/screens/login/login_screen.dart';
 import 'package:blueex_emp_app_flutter/shared/routes/navigate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

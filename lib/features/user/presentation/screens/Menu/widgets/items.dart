@@ -1,5 +1,5 @@
 import 'package:blueex_emp_app_flutter/shared/widgets/card.dart';
-import 'package:blueex_emp_app_flutter/features/user/presentation/screens/Menu/menu_screen.dart';
+import 'package:blueex_emp_app_flutter/features/user/presentation/screens/menu/menu_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeItems extends StatelessWidget {

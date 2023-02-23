@@ -1,3 +1,4 @@
+import 'package:blueex_emp_app_flutter/shared/params/attendance_data_params.dart';
 import 'package:dartz/dartz.dart';
 import 'package:blueex_emp_app_flutter/features/attendance/data/datasource/attendance_data_remote_datasource.dart';
 import 'package:blueex_emp_app_flutter/features/attendance/data/mapper/attendance_data_mapper.dart';
@@ -47,6 +48,17 @@ class AttendanceDataRepositoryImpl extends AttendanceDataRepository {
       return Right(result);
     } catch (e) {
       return Left(ServerFailure(e.toString()));
+    }
+  }
+  @override
+  Future<Either<Failure, String>> requestAttendance(
+      {required AttendanceDataParams params}) async {
+    try {
+      String result = await _remoteDataSource.requestAttendance(params);
+
+      return Right(result);
+    } catch (e) {
+      return Left(ServerFailure(''));
     }
   }
 }

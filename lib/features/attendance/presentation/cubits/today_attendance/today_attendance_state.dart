@@ -2,13 +2,23 @@
 
 part of 'today_attendance_cubit.dart';
 
+enum TodayAttendanceStatus {
+  loading,
+  loaded,
+}
+
 class TodayAttendanceState extends Equatable {
+  final TodayAttendanceStatus status;
   final AttendanceData attendanceData;
 
-  const TodayAttendanceState({required this.attendanceData});
+  const TodayAttendanceState({
+    required this.attendanceData,
+    required this.status,
+  });
 
-  factory TodayAttendanceState.initial() =>
-      TodayAttendanceState(attendanceData: AttendanceData.initial());
+  factory TodayAttendanceState.initial() => TodayAttendanceState(
+      attendanceData: AttendanceData.initial(),
+      status: TodayAttendanceStatus.loaded);
 
   @override
   List<Object> get props => [attendanceData];
@@ -18,15 +28,18 @@ class TodayAttendanceState extends Equatable {
 
   TodayAttendanceState copyWith({
     AttendanceData? attendanceData,
+    TodayAttendanceStatus? status,
   }) {
     return TodayAttendanceState(
       attendanceData: attendanceData ?? this.attendanceData,
+      status: status ?? this.status,
     );
   }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'attendanceData': attendanceData.toMap(),
+      'status': 'loaded',
     };
   }
 
@@ -34,6 +47,7 @@ class TodayAttendanceState extends Equatable {
     return TodayAttendanceState(
       attendanceData:
           AttendanceData.fromMap(map['attendanceData'] as Map<String, dynamic>),
+          status: TodayAttendanceStatus.loaded,
     );
   }
 

@@ -2,7 +2,7 @@ import 'package:blueex_emp_app_flutter/features/user/presentation/cubits/user/us
 import 'package:blueex_emp_app_flutter/shared/widgets/text.dart';
 import 'package:blueex_emp_app_flutter/shared/widgets/text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:blueex_emp_app_flutter/features/user/presentation/screens/Otp/otp_screen.dart';
+import 'package:blueex_emp_app_flutter/features/user/presentation/screens/otp/otp_screen.dart';
 import 'package:blueex_emp_app_flutter/shared/routes/navigate.dart';
 import 'package:blueex_emp_app_flutter/shared/widgets/alert.dart';
 import 'package:blueex_emp_app_flutter/shared/widgets/button.dart';

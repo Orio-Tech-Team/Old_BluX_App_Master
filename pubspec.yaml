@@ -51,9 +51,14 @@ dependencies:
   permission_handler: ^9.2.0
   cached_network_image: ^3.2.1
   internet_connection_checker: ^0.0.1+4
-  platform_device_id: ^1.0.1
   google_maps_flutter: ^2.1.12
   alt_sms_autofill: ^1.0.0
+  flutter_background_service: ^2.4.5
+  flutter_local_notifications: ^12.0.4
+  shared_preferences: ^2.0.15
+  get: ^4.6.5
+  dio: ^5.0.0
+
 
 dev_dependencies:
   flutter_test:
@@ -82,7 +87,6 @@ flutter:
   assets:
     - assets/icons/
     - assets/icons/attendance/
-    - assets/icons/rider/
     - assets/icons/shared/
     - assets/icons/shared/layout/app_bar/
     - assets/icons/shared/layout/nav_bar/

@@ -1,8 +1,8 @@
-import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/Complaint/complaint_screen.dart';
-import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/Pickup/pickup_screen.dart';
-import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/Tutorial/tutorial_screen.dart';
-import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/Verify/verify_screen.dart';
-import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/Wallet/wallet_screen.dart';
+import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/complaint/complaint_screen.dart';
+import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/pickup/pickup_screen.dart';
+import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/tutorial/tutorial_screen.dart';
+import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/verify/verify_screen.dart';
+import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/wallet/wallet_screen.dart';
 import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/delivery_wallet/delivery_wallet_screen.dart';
 import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/manual_sheet_number/manual_sheet_number_screen.dart';
 import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/pickup_wallet/pickup_wallet_screen.dart';

@@ -1,4 +1,4 @@
-import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/Pickup/widgets/pickup_card.dart';
+import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/pickup/widgets/pickup_card.dart';
 import 'package:blueex_emp_app_flutter/features/rider/presentation/screens/updated_status/updated_status_screen.dart';
 import 'package:blueex_emp_app_flutter/shared/layout/layout.dart';
 import 'package:blueex_emp_app_flutter/shared/routes/navigate.dart';

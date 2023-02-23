@@ -71,10 +71,10 @@ class _BodyState extends State<Body> {
                     const SizedBox(height: 20),
                     Button(
                       child: context.watch<UserCubit>().state.status ==
-                              UserStatus.loading
+                          UserStatus.loading
                           ? const CircularProgressIndicator(
-                              color: Colors.white,
-                            )
+                        color: Colors.white,
+                      )
                           : const Text('Login', style: TextStyle(fontSize: 18)),
                       onPressed: () => _onSubmit(_onSuccess),
                     ),

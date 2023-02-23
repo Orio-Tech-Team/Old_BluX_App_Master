@@ -1,5 +1,8 @@
+import 'package:blueex_emp_app_flutter/features/attendance/presentation/screens/attendance_data/attendance_data_screen.dart';
+import 'package:blueex_emp_app_flutter/features/hrdesk/presentation/screen/hrdesk_screen.dart';
+import 'package:blueex_emp_app_flutter/features/notification/presentation/screen/notification_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:blueex_emp_app_flutter/features/user/presentation/screens/Home/home_screen.dart';
+import 'package:blueex_emp_app_flutter/features/user/presentation/screens/home/home_screen.dart';
 import 'package:blueex_emp_app_flutter/shared/layout/widgets/navigation_button.dart';
 import 'package:blueex_emp_app_flutter/shared/routes/navigate.dart';
 
@@ -35,11 +38,11 @@ class _LayoutBottomBarState extends State<LayoutBottomBar> {
                   currentTab: widget.currentTab,
                 ),
                 NavigationButton(
-                  onPressed: () {},
+                  onPressed: () => Navigate.to(context, HrdeskScreen.id),
                   icon: 'assets/icons/shared/layout/nav_bar/hr_bottom.svg',
                   text: 'HR desk',
                   tab: 2,
-                  isDisabled: true,
+                  isDisabled: false,
                   currentTab: widget.currentTab,
                 ),
               ],
@@ -48,17 +51,18 @@ class _LayoutBottomBarState extends State<LayoutBottomBar> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 NavigationButton(
-                  onPressed: () {},
-                  icon: 'assets/icons/shared/layout/nav_bar/incident.svg',
-                  text: 'Incident',
+                  onPressed: () =>
+                      Navigate.to(context, AttendanceDataScreen.id),
+                  icon: 'assets/icons/attendance/calender.svg',
+                  text: 'Details',
                   tab: 3,
-                  isDisabled: true,
+                  isDisabled: false,
                   currentTab: widget.currentTab,
                 ),
                 NavigationButton(
                   onPressed: () {},
-                  icon: 'assets/icons/shared/layout/nav_bar/chat.svg',
-                  text: 'Chat',
+                  icon: 'assets/icons/notification.svg',
+                  text: 'Notify',
                   tab: 4,
                   isDisabled: true,
                   currentTab: widget.currentTab,

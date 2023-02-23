@@ -19,14 +19,23 @@ class TodayAttendanceCubit extends Cubit<TodayAttendanceState>
   }) : super(TodayAttendanceState.initial());
 
   Future<void> get(String token) async {
+     emit(state.copyWith(
+      status: TodayAttendanceStatus.loading,
+    ));
     final Either<Failure, AttendanceData> attendance =
         await todayAttendanceUseCase.call(TokenParams(token: token));
 
     attendance.fold(
-      (Failure failure) {},
+      (Failure failure) {
+        emit(state.copyWith(
+          status: TodayAttendanceStatus.loaded,
+          
+        ));
+      },
       (AttendanceData attendance) {
         emit(state.copyWith(
           attendanceData: attendance,
+          status: TodayAttendanceStatus.loaded,
         ));
       },
     );

@@ -17,6 +17,6 @@ class AttendanceDataScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Layout(body: Body());
+    return const Layout(currentTab: 3, body: Body());
   }
 }
